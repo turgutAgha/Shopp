@@ -1,0 +1,8 @@
+https://stackoverflow.com/questions/36662712/how-do-i-divide-a-page-in-three-vertical-sections/36662828
+
++ellipsis
++create config(json) file instead of hardcoding
++create business layer folder
++change file and folder names
+-add docstrings
+-add readme

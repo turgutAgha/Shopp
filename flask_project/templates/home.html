@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block content %}
+	{% for ind in posts %}
+		<div class="column">
+			{% for post in posts[ind] %}
+				<article class="media content-section">
+					<div class="media-body" margin-bottom="40px">
+						<div class="article-metadata">
+							<h2><a class="article-title" href="{{ post[3] }}">{{ post[0] }}</a></h2>
+							<div class="article-contents">	
+								<p class="article-content">{{ post[1] }}</p>
+								<p class="article-content">{{ post[4] }}</p>
+								<p class="article-content">{{ post[2] }}</p>
+							</div>
+						</div>
+					</div>
+				</article>
+			{% endfor %}
+		</div>
+	{% endfor %}
+{% endblock content %}
