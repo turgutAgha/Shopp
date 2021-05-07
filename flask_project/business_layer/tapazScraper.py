@@ -7,12 +7,23 @@ from flask_project.business_layer.webScraper import WebScraper
 
 class TapazScraper(WebScraper):
 
+    def __init__(self):
+        super().__init__()
+
     def get_url(self, search_term, price_range):
         template = config.get_property("tapaz_url_template")
         search_term = search_term.replace(' ', '+')
         url = template.format(search_term, price_range[0], price_range[1])
 
         return url
+
+    def get_price(self, price):
+        p = price.split()
+        p = "".join(p)
+        p = p.split(',')
+        p = "".join(p)
+
+        return float(p)
 
     def extract_record(self, item):
         try:
@@ -27,14 +38,6 @@ class TapazScraper(WebScraper):
 
         result = [item_description, item_price, rating, item_url, 'www.tap.az']
         return result
-
-    def get_price(self, price):
-        p = price.split()
-        p = "".join(p)
-        p = p.split(',')
-        p = "".join(p)
-
-        return float(p)
 
     def scrape(self, search_term, price_range):
 
