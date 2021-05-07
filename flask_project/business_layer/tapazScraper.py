@@ -1,8 +1,7 @@
 from bs4 import BeautifulSoup
 
-from flask_project import driver
-from flask_project.business_layer import config
-from flask_project.business_layer.webScraper import WebScraper
+from . import driver, config
+from .webScraper import WebScraper
 
 
 class TapazScraper(WebScraper):
@@ -11,7 +10,7 @@ class TapazScraper(WebScraper):
         super().__init__()
 
     def get_url(self, search_term, price_range):
-        template = config.get_property("tapaz_url_template")
+        template = config.get_value("tapaz_url_template")
         search_term = search_term.replace(' ', '+')
         url = template.format(search_term, price_range[0], price_range[1])
 

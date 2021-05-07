@@ -1,4 +1,4 @@
-from flask_project.business_layer import amazonScraper, tapazScraper, dataHandler, aliexpressScraper
+from . import amazonScraper, tapazScraper, dataHandler, aliexpressScraper
 
 
 class Displayer:

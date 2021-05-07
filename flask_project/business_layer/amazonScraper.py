@@ -1,8 +1,7 @@
 from bs4 import BeautifulSoup
 
-from flask_project import driver
-from flask_project.business_layer import config
-from flask_project.business_layer.webScraper import WebScraper
+from . import driver, config
+from .webScraper import WebScraper
 
 
 class AmazonScraper(WebScraper):
@@ -11,7 +10,7 @@ class AmazonScraper(WebScraper):
         super().__init__()
 
     def get_url(self, search_term, price_range):
-        template = config.get_property("amazon_url_template")
+        template = config.get_value("amazon_url_template")
         search_term = search_term.replace(' ', '+')
         url = template.format(search_term, int(price_range[0] * 100), int(price_range[1] * 100)) + '&page={}'
 

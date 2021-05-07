@@ -1,8 +1,8 @@
-from flask_project.business_layer import config
+from . import config
 
-AZN_TO_USD = config.get_property('AZN_TO_USD')
-AZN_TO_EUR = config.get_property('AZN_TO_EUR')
-USD_TO_EUR = config.get_property('USD_TO_EUR')
+AZN_TO_USD = config.get_value('AZN_TO_USD')
+AZN_TO_EUR = config.get_value('AZN_TO_EUR')
+USD_TO_EUR = config.get_value('USD_TO_EUR')
 
 
 class DataHandler:
