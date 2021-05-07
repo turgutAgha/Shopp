@@ -57,7 +57,7 @@ python3 run.py
 
 3. Open one of the web browsers
 
-4. Enter the following address
+4. Enter one of the following addresses
 
 ```sh
 localhost:5000
