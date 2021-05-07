@@ -3,12 +3,9 @@
 Shopp is a product searching tool that scrapes data from three websites, namely, Amazon, TapAz, Aliexpress and displays
 the products' details.
 
-- [About](#about)
 - [Features](#features)
 - [Requirements](#requirements)
 - [How to Use](#how-to-use)
-
-## Examples
 
 ## Features
 
@@ -44,8 +41,9 @@ pip3 install selenium
    shows how to download the Chrome webdriver and add it to PATH in different operating systems.
 
 ## How to use
+
 1. Clone the project
-  
+
 ```sh
 git clone git@github.com:turgutAgha/Shopp.git
 ```
